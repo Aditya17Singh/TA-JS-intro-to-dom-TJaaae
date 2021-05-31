@@ -1,5 +1,4 @@
-
-    books: [
+let books = [
       {
         isbn: "9781593275846",
         title: "Eloquent JavaScript, Second Edition",
@@ -114,5 +113,41 @@
           "A JavaScript pattern and antipattern collection that covers function patterns, jQuery patterns, jQuery plugin patterns, design patterns, general patterns, literals and constructor patterns, object creation patterns, code reuse patterns, DOM and browser patterns",
         website: "https://shichuan.github.io/javascript-patterns/",
       },
-    ],
-  
+    ]
+
+          // <li class="archive flex-30">
+          //   <img class="width-100" src="https://eloquentjavascript.net/img/cover.jpg" alt="">
+          //   <h2> Eloquent JavaScript, Second Edition</h2>
+          //   <p>Author: <span>"Marijn Haverbeke"</span></p> 
+          //   <button class="btn">
+          //     <a href="#">Buy Now</a>
+          //   </button>
+          // </li>
+
+// let div = document.querySelector("div")
+let ul = document.querySelector(".flex ,.wrap")
+books.forEach(elm => {
+  let li = document.createElement("li");
+  li.classList.add("archive","flex-30");
+  let image = document.createElement("img");
+  image.src = elm.image;
+  let h2 = document.createElement("h2");
+  h2.innerText = elm.title
+  let p = document.createElement("p");
+  p.innerText = "Author:"
+  let button = document.createElement("button");
+  button.classList.add("btn")
+  let a = document.createElement("a");
+  a.innerText = "Buy Now";
+  button.append(a);
+  let span = document.createElement("span")
+  span.innerText = elm.author
+  p.append(span);
+  li.append(image , h2 , p, button);
+  ul.append(li);
+})
+
+
+
+// let body = document.querySelector("body");
+// body.style.backgroundColor = "#FDF5E8";
