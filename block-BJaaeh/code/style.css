@@ -1,0 +1,46 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color:rgb(109, 104, 104);
+}
+.box {
+  border: 2px solid #d6bcfa;
+  height: 500px;
+  border-radius: 10px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.hand{
+  width: 9%;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: 48.3%;
+  right: 46.8%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.0.9s;
+  transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+  border-radius: 90%;
+}
+ img{
+  margin-left: 28rem;
+  margin-top: 4rem;
+  background-color: paleturquoise;
+  border-radius: 50%;
+}
+.sec-hand{
+  width: 150px;
+  border-radius: 50%;
+}
+.hour-hand{
+  border-radius: 10%;
+  width: 8%;
+  border-radius: 50%;
+}
